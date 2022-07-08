@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.5.0+commit.1d4f565a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "newCoin",
+						"type": "string"
+					},
+					{
+						"name": "newPrice",
+						"type": "uint256"
+					},
+					{
+						"name": "isBuy",
+						"type": "bool"
+					}
+				],
+				"name": "updateTrade",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Week20-Day1-Activity3.sol": "LatestTrade"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Week20-Day1-Activity3.sol": {
+			"keccak256": "0xeea8fa37a908a9e7d858135881712eb9005b9b4e7e086025c84acee80120052a",
+			"urls": [
+				"bzzr://7dceb4544faf0d15830b71c5565019fb89150e812ab431c70b19d3c6cccedd51"
+			]
+		}
+	},
+	"version": 1
+}
