@@ -1,0 +1,36 @@
+{
+	"compiler": {
+		"version": "0.5.0+commit.1d4f565a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Week20-Day2-Activity2.sol": "CustomerAccount"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Week20-Day2-Activity2.sol": {
+			"keccak256": "0x1806f1e3c0b59fc6fdb165e7ba8e49abd7bfbfedd4d298f34edb3c5e17095e55",
+			"urls": [
+				"bzzr://f0565903a3d05858da187c35d685365a5ba8d257e59544b6210b6ba40c77a814"
+			]
+		}
+	},
+	"version": 1
+}
