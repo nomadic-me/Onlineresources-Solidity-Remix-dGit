@@ -23,7 +23,7 @@ of the code where the smart contract will be written.
 9. Inside the `contract` create two variables. First create a `variable` using the `address` keyword called my address and set it to `0xc3879B456DAA348a16B6524CBC558d2CC984722c`.
 Then, create a `variable` using the `message` keyword and set it to `"Send me money!"`.
 
- /*
+ */
 
 pragma solidity ^0.5.0;
 
