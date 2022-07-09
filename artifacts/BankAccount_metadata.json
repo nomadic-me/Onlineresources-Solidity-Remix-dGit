@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.5.0+commit.1d4f565a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"name": "recipient",
+						"type": "address"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "fallback"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Week20-Day2-Activity1.sol": "BankAccount"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Week20-Day2-Activity1.sol": {
+			"keccak256": "0x5f6cc43db8313e0b1c205c05b69fb29f4d3b6eafc15d685c85b36d77c463bc3a",
+			"urls": [
+				"bzzr://8bb1d6a3efd96258c7bbeed8c697ab127634ba460f2dcdd5ead2b41b86b39e26"
+			]
+		}
+	},
+	"version": 1
+}
