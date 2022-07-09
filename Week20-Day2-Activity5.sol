@@ -53,8 +53,8 @@ Instructions
 pragma solidity ^0.5.0;
 
 contract TradeController {
-    uint previousPrice;
-    string tradeType;
+    uint public previousPrice;
+    string public tradeType;
     function makeTrade(uint currentPrice, bool buyAnyway) public{
         if (currentPrice < previousPrice || buyAnyway){
             tradeType = "Buy";
@@ -68,5 +68,6 @@ contract TradeController {
             tradeType = "Hold";
         }
     }
+    function() external payable {}
 }
 

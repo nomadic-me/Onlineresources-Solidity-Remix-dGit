@@ -6,6 +6,34 @@
 	"output": {
 		"abi": [
 			{
+				"constant": true,
+				"inputs": [],
+				"name": "tradeType",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "previousPrice",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"constant": false,
 				"inputs": [
 					{
@@ -22,6 +50,11 @@
 				"payable": false,
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "fallback"
 			}
 		],
 		"devdoc": {
@@ -45,9 +78,9 @@
 	},
 	"sources": {
 		"Week20-Day2-Activity5.sol": {
-			"keccak256": "0x43d574c092cfb5b80cfcb7bb35aa29e3060c608c50d6ae2cb843c5a32854ad7d",
+			"keccak256": "0xf8b1fceb1d1818852e8247b68c7c6d07538822a0ecc9d5898b141c1be38f3a20",
 			"urls": [
-				"bzzr://2bc9fc02c411d7065c1b40b4a782de6ce484b500961025de14212d75ebd08a3a"
+				"bzzr://d530e0e98e0200406d7cb57f4ae31bfb727127b90e7d1dda3c979667c7d1367d"
 			]
 		}
 	},
