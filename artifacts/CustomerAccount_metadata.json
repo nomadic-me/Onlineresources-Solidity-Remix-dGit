@@ -4,7 +4,114 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getInfo",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					},
+					{
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "string"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "sendRemittance",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "accountBalance",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "newOwner",
+						"type": "address"
+					},
+					{
+						"name": "newAccountStatus",
+						"type": "bool"
+					},
+					{
+						"name": "newAccountBalance",
+						"type": "uint256"
+					},
+					{
+						"name": "newCustomerName",
+						"type": "string"
+					},
+					{
+						"name": "newCustomerLastName",
+						"type": "string"
+					}
+				],
+				"name": "setInfo",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "fallback"
+			}
+		],
 		"devdoc": {
 			"methods": {}
 		},
@@ -14,7 +121,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Week20-Day1-Activity2.sol": "CustomerAccount"
+			"Week20-Day2-Activity2.sol": "CustomerAccount"
 		},
 		"evmVersion": "byzantium",
 		"libraries": {},
@@ -25,10 +132,10 @@
 		"remappings": []
 	},
 	"sources": {
-		"Week20-Day1-Activity2.sol": {
-			"keccak256": "0x1806f1e3c0b59fc6fdb165e7ba8e49abd7bfbfedd4d298f34edb3c5e17095e55",
+		"Week20-Day2-Activity2.sol": {
+			"keccak256": "0xd91f930c4c1189ebfb37f81381b3d73858f589e56bab77e975b56ec4784e3026",
 			"urls": [
-				"bzzr://f0565903a3d05858da187c35d685365a5ba8d257e59544b6210b6ba40c77a814"
+				"bzzr://e57b2598c55c45fe93a2055ce7fb8091d3f2a0cc803420677e89a04048919f22"
 			]
 		}
 	},
