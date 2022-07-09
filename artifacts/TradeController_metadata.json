@@ -4,7 +4,26 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "currentPrice",
+						"type": "uint256"
+					},
+					{
+						"name": "buyAnyway",
+						"type": "bool"
+					}
+				],
+				"name": "makeTrade",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"methods": {}
 		},
@@ -26,9 +45,9 @@
 	},
 	"sources": {
 		"Week20-Day2-Activity5.sol": {
-			"keccak256": "0x11e917e82460c81b3d54488fa32e1a996dd1b516ffddd372a9c2f037348078f6",
+			"keccak256": "0x43d574c092cfb5b80cfcb7bb35aa29e3060c608c50d6ae2cb843c5a32854ad7d",
 			"urls": [
-				"bzzr://fded58bc1361ce49373f8e45e360964c746d3afb51f1571d49dcddc72be4631c"
+				"bzzr://2bc9fc02c411d7065c1b40b4a782de6ce484b500961025de14212d75ebd08a3a"
 			]
 		}
 	},

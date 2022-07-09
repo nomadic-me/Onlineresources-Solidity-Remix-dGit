@@ -15,12 +15,21 @@ Instructions
     }
 
 2. Define two variables: a `uint` variable named `previousPrice` and a `string` variable named `tradeType`.
+    **Note** 
+    You use a `uint` variable to contain the previous price. 
+    This is because the price will always be a positive value. 
+    You’ll never have a negative price. 
+    You use `string` for the `tradeType` variable because its value can be “Buy”, “Sell”, or “Hold”.
 
-    **Note** You use a `uint` variable to contain the previous price. This is because the price will always be a positive value. You’ll never have a negative price. You use `string` for the `tradeType` variable because its value can be “Buy”, “Sell”, or “Hold”.
+3. Create a `public` function named `makeTrade`. 
+    This function should take a `uint` argument named `currentPrice` that represents the current price of the asset.
 
-3. Create a `public` function named `makeTrade`. This function should take a `uint` argument named `currentPrice` that represents the current price of the asset.
-
-4. In the body of the `makeTrade` function, define a conditional statement that checks if the current price is less than the previous price. If this condition is true, set the `tradeType` variable to “Buy” and the previous price equal to the current price.
+4. In the body of the `makeTrade` function, 
+    define a conditional statement that checks 
+        if the current price is less than the previous price. 
+            If this condition is true, 
+                set the `tradeType` variable to “Buy” 
+                and the previous price equal to the current price.
 
     **Hint** Just like in Python, an `if` statement in Solidity consists of the `if` keyword followed by a condition that evaluates to true or false. Unlike in Python, parentheses surround the condition in Solidity.
 
@@ -44,6 +53,20 @@ Instructions
 pragma solidity ^0.5.0;
 
 contract TradeController {
-// insert code here
+    uint previousPrice;
+    string tradeType;
+    function makeTrade(uint currentPrice, bool buyAnyway) public{
+        if (currentPrice < previousPrice || buyAnyway){
+            tradeType = "Buy";
+            previousPrice = currentPrice;
+        }
+        else if(currentPrice > previousPrice || buyAnyway){
+            tradeType = "Sell";
+            previousPrice = currentPrice;
+        }
+        else {
+            tradeType = "Hold";
+        }
+    }
 }
 

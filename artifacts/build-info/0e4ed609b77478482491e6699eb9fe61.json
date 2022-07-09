@@ -1,0 +1,828 @@
+{
+	"id": "0e4ed609b77478482491e6699eb9fe61",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.5.0",
+	"solcLongVersion": "0.5.0+commit.1d4f565a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"Week20-Day2-Activity5.sol": {
+				"content": "/*\n\nTrade Controllers\n-----------------\nIn this activity, you’ll gain practical experience with using conditional statements in Solidity. You’ll use basic logical operators and a control flow to build a smart contract that tracks trades in the Ethereum blockchain.\n\nInstructions\n------------\n1. Create a basic smart contract, named `TradeController`, as follows:\n\n    pragma solidity ^0.5.0;\n\n    contract TradeController {\n    // insert code here\n    }\n\n2. Define two variables: a `uint` variable named `previousPrice` and a `string` variable named `tradeType`.\n    **Note** \n    You use a `uint` variable to contain the previous price. \n    This is because the price will always be a positive value. \n    You’ll never have a negative price. \n    You use `string` for the `tradeType` variable because its value can be “Buy”, “Sell”, or “Hold”.\n\n3. Create a `public` function named `makeTrade`. \n    This function should take a `uint` argument named `currentPrice` that represents the current price of the asset.\n\n4. In the body of the `makeTrade` function, define a conditional statement that checks if the current price is less than the previous price. If this condition is true, set the `tradeType` variable to “Buy” and the previous price equal to the current price.\n\n    **Hint** Just like in Python, an `if` statement in Solidity consists of the `if` keyword followed by a condition that evaluates to true or false. Unlike in Python, parentheses surround the condition in Solidity.\n\n5. Add a new `bool` argument to the `makeTrade` function, and name it `buyAnyway`.\n\n6. Place `|| buyAnyway` at the end of the condition. This will allow the function to return `true` even if the current trade price is greater than the previous price. You might want to buy anyway, regardless of the previous price! Here’s the condition:\n\n    if (currentPrice < previousPrice || buyAnyway)\n\n   **Hint** The symbol consisting of two vertical bars ( `||` ) represents the logical OR operator. Python defines most logical operators with keywords in plain English, like `and`, `or`, and `not`. But, Solidity uses symbols. Two ampersands ( `&&` ) means AND, two vertical bars ( `II` ) means OR, and an exclamation point ( `!` ) means NOT. You can learn more about the logical operators in the [Booleans](https://docs.soliditylang.org/en/v0.5.0/types.html#booleans) section of the Solidity documentation.\n    In plain English, this `if` statement now says the following: if the `currentPrice` value is less than the `previousPrice` value, or if `buyAnyway` is set to `true`, then continue.\n\n7. Add an `else if` statement with a condition that checks if `currentPrice` is less than `previousPrice` so that we know when to sell.\n\n8. For the case when the first two conditions evaluate to `false`, add a final `else` statement. In this statement, set `tradeType` to “Hold”, because you don’t want to buy or sell in this scenario.\n\n9. Compile your smart contract. If an error occurs, review your code, and make the necessary changes for a successful compilation.\n\n*/\n\npragma solidity ^0.5.0;\n\ncontract TradeController {\n    uint previousPrice;\n    string tradeType;\n    function makeTrade(uint currentPrice) public{}\n}\n\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"Week20-Day2-Activity5.sol": {
+				"TradeController": {
+					"abi": [
+						{
+							"constant": false,
+							"inputs": [
+								{
+									"name": "currentPrice",
+									"type": "uint256"
+								}
+							],
+							"name": "makeTrade",
+							"outputs": [],
+							"payable": false,
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"methods": {}
+					},
+					"evm": {
+						"assembly": "    /* \"Week20-Day2-Activity5.sol\":3101:3226  contract TradeController {... */\n  mstore(0x40, 0x80)\n  callvalue\n    /* \"--CODEGEN--\":8:17   */\n  dup1\n    /* \"--CODEGEN--\":5:7   */\n  iszero\n  tag_1\n  jumpi\n    /* \"--CODEGEN--\":30:31   */\n  0x0\n    /* \"--CODEGEN--\":27:28   */\n  dup1\n    /* \"--CODEGEN--\":20:32   */\n  revert\n    /* \"--CODEGEN--\":5:7   */\ntag_1:\n    /* \"Week20-Day2-Activity5.sol\":3101:3226  contract TradeController {... */\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x0\n  codecopy\n  0x0\n  return\nstop\n\nsub_0: assembly {\n        /* \"Week20-Day2-Activity5.sol\":3101:3226  contract TradeController {... */\n      mstore(0x40, 0x80)\n      jumpi(tag_1, lt(calldatasize, 0x4))\n      calldataload(0x0)\n      0x100000000000000000000000000000000000000000000000000000000\n      swap1\n      div\n      0xffffffff\n      and\n      dup1\n      0xcf285031\n      eq\n      tag_2\n      jumpi\n    tag_1:\n      0x0\n      dup1\n      revert\n        /* \"Week20-Day2-Activity5.sol\":3178:3224  function makeTrade(uint currentPrice) public{} */\n    tag_2:\n      callvalue\n        /* \"--CODEGEN--\":8:17   */\n      dup1\n        /* \"--CODEGEN--\":5:7   */\n      iszero\n      tag_3\n      jumpi\n        /* \"--CODEGEN--\":30:31   */\n      0x0\n        /* \"--CODEGEN--\":27:28   */\n      dup1\n        /* \"--CODEGEN--\":20:32   */\n      revert\n        /* \"--CODEGEN--\":5:7   */\n    tag_3:\n        /* \"Week20-Day2-Activity5.sol\":3178:3224  function makeTrade(uint currentPrice) public{} */\n      pop\n      tag_4\n      0x4\n      dup1\n      calldatasize\n      sub\n        /* \"--CODEGEN--\":13:15   */\n      0x20\n        /* \"--CODEGEN--\":8:11   */\n      dup2\n        /* \"--CODEGEN--\":5:16   */\n      lt\n        /* \"--CODEGEN--\":2:4   */\n      iszero\n      tag_5\n      jumpi\n        /* \"--CODEGEN--\":29:30   */\n      0x0\n        /* \"--CODEGEN--\":26:27   */\n      dup1\n        /* \"--CODEGEN--\":19:31   */\n      revert\n        /* \"--CODEGEN--\":2:4   */\n    tag_5:\n        /* \"Week20-Day2-Activity5.sol\":3178:3224  function makeTrade(uint currentPrice) public{} */\n      dup2\n      add\n      swap1\n      dup1\n      dup1\n      calldataload\n      swap1\n      0x20\n      add\n      swap1\n      swap3\n      swap2\n      swap1\n      pop\n      pop\n      pop\n      jump(tag_6)\n    tag_4:\n      stop\n    tag_6:\n      pop\n      jump\t// out\n\n    auxdata: 0xa165627a7a723058203be04d39e13f87237d88b32e738bc651d2f84a003715d1997931fe7bc3122ece0029\n}\n",
+						"bytecode": {
+							"linkReferences": {},
+							"object": "608060405234801561001057600080fd5b5060aa8061001f6000396000f3fe608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063cf285031146044575b600080fd5b348015604f57600080fd5b50607960048036036020811015606457600080fd5b8101908080359060200190929190505050607b565b005b5056fea165627a7a723058203be04d39e13f87237d88b32e738bc651d2f84a003715d1997931fe7bc3122ece0029",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0xAA DUP1 PUSH2 0x1F PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH1 0x3F JUMPI PUSH1 0x0 CALLDATALOAD PUSH29 0x100000000000000000000000000000000000000000000000000000000 SWAP1 DIV PUSH4 0xFFFFFFFF AND DUP1 PUSH4 0xCF285031 EQ PUSH1 0x44 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH1 0x4F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x79 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x64 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 ADD SWAP1 DUP1 DUP1 CALLDATALOAD SWAP1 PUSH1 0x20 ADD SWAP1 SWAP3 SWAP2 SWAP1 POP POP POP PUSH1 0x7B JUMP JUMPDEST STOP JUMPDEST POP JUMP INVALID LOG1 PUSH6 0x627A7A723058 KECCAK256 EXTCODESIZE 0xe0 0x4d CODECOPY 0xe1 EXTCODEHASH DUP8 0x23 PUSH30 0x88B32E738BC651D2F84A003715D1997931FE7BC3122ECE00290000000000 ",
+							"sourceMap": "3101:125:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3101:125:0;;;;;;;"
+						},
+						"deployedBytecode": {
+							"linkReferences": {},
+							"object": "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063cf285031146044575b600080fd5b348015604f57600080fd5b50607960048036036020811015606457600080fd5b8101908080359060200190929190505050607b565b005b5056fea165627a7a723058203be04d39e13f87237d88b32e738bc651d2f84a003715d1997931fe7bc3122ece0029",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH1 0x3F JUMPI PUSH1 0x0 CALLDATALOAD PUSH29 0x100000000000000000000000000000000000000000000000000000000 SWAP1 DIV PUSH4 0xFFFFFFFF AND DUP1 PUSH4 0xCF285031 EQ PUSH1 0x44 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH1 0x4F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x79 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x64 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 ADD SWAP1 DUP1 DUP1 CALLDATALOAD SWAP1 PUSH1 0x20 ADD SWAP1 SWAP3 SWAP2 SWAP1 POP POP POP PUSH1 0x7B JUMP JUMPDEST STOP JUMPDEST POP JUMP INVALID LOG1 PUSH6 0x627A7A723058 KECCAK256 EXTCODESIZE 0xe0 0x4d CODECOPY 0xe1 EXTCODEHASH DUP8 0x23 PUSH30 0x88B32E738BC651D2F84A003715D1997931FE7BC3122ECE00290000000000 ",
+							"sourceMap": "3101:125:0:-;;;;;;;;;;;;;;;;;;;;;;;;3178:46;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3178:46:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;3178:46:0;;;;;;;;;;;;;;;;;;;;;;:::o"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "34000",
+								"executionCost": "87",
+								"totalCost": "34087"
+							},
+							"external": {
+								"makeTrade(uint256)": "217"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 3101,
+									"end": 3226,
+									"name": "PUSH",
+									"value": "80"
+								},
+								{
+									"begin": 3101,
+									"end": 3226,
+									"name": "PUSH",
+									"value": "40"
+								},
+								{
+									"begin": 3101,
+									"end": 3226,
+									"name": "MSTORE"
+								},
+								{
+									"begin": 3101,
+									"end": 3226,
+									"name": "CALLVALUE"
+								},
+								{
+									"begin": 8,
+									"end": 17,
+									"name": "DUP1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "ISZERO"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "PUSH [tag]",
+									"value": "1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "JUMPI"
+								},
+								{
+									"begin": 30,
+									"end": 31,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 27,
+									"end": 28,
+									"name": "DUP1"
+								},
+								{
+									"begin": 20,
+									"end": 32,
+									"name": "REVERT"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "tag",
+									"value": "1"
+								},
+								{
+									"begin": 5,
+									"end": 7,
+									"name": "JUMPDEST"
+								},
+								{
+									"begin": 3101,
+									"end": 3226,
+									"name": "POP"
+								},
+								{
+									"begin": 3101,
+									"end": 3226,
+									"name": "PUSH #[$]",
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 3101,
+									"end": 3226,
+									"name": "DUP1"
+								},
+								{
+									"begin": 3101,
+									"end": 3226,
+									"name": "PUSH [$]",
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 3101,
+									"end": 3226,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 3101,
+									"end": 3226,
+									"name": "CODECOPY"
+								},
+								{
+									"begin": 3101,
+									"end": 3226,
+									"name": "PUSH",
+									"value": "0"
+								},
+								{
+									"begin": 3101,
+									"end": 3226,
+									"name": "RETURN"
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a165627a7a723058203be04d39e13f87237d88b32e738bc651d2f84a003715d1997931fe7bc3122ece0029",
+									".code": [
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "PUSH",
+											"value": "80"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "PUSH",
+											"value": "40"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "MSTORE"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "PUSH",
+											"value": "4"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "CALLDATASIZE"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "LT"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "PUSH [tag]",
+											"value": "1"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "JUMPI"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "PUSH",
+											"value": "0"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "CALLDATALOAD"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "PUSH",
+											"value": "100000000000000000000000000000000000000000000000000000000"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "SWAP1"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "DIV"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "PUSH",
+											"value": "FFFFFFFF"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "AND"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "DUP1"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "PUSH",
+											"value": "CF285031"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "EQ"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "PUSH [tag]",
+											"value": "2"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "JUMPI"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "tag",
+											"value": "1"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "JUMPDEST"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "PUSH",
+											"value": "0"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "DUP1"
+										},
+										{
+											"begin": 3101,
+											"end": 3226,
+											"name": "REVERT"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "tag",
+											"value": "2"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "JUMPDEST"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "CALLVALUE"
+										},
+										{
+											"begin": 8,
+											"end": 17,
+											"name": "DUP1"
+										},
+										{
+											"begin": 5,
+											"end": 7,
+											"name": "ISZERO"
+										},
+										{
+											"begin": 5,
+											"end": 7,
+											"name": "PUSH [tag]",
+											"value": "3"
+										},
+										{
+											"begin": 5,
+											"end": 7,
+											"name": "JUMPI"
+										},
+										{
+											"begin": 30,
+											"end": 31,
+											"name": "PUSH",
+											"value": "0"
+										},
+										{
+											"begin": 27,
+											"end": 28,
+											"name": "DUP1"
+										},
+										{
+											"begin": 20,
+											"end": 32,
+											"name": "REVERT"
+										},
+										{
+											"begin": 5,
+											"end": 7,
+											"name": "tag",
+											"value": "3"
+										},
+										{
+											"begin": 5,
+											"end": 7,
+											"name": "JUMPDEST"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "POP"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "PUSH [tag]",
+											"value": "4"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "PUSH",
+											"value": "4"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "DUP1"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "CALLDATASIZE"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "SUB"
+										},
+										{
+											"begin": 13,
+											"end": 15,
+											"name": "PUSH",
+											"value": "20"
+										},
+										{
+											"begin": 8,
+											"end": 11,
+											"name": "DUP2"
+										},
+										{
+											"begin": 5,
+											"end": 16,
+											"name": "LT"
+										},
+										{
+											"begin": 2,
+											"end": 4,
+											"name": "ISZERO"
+										},
+										{
+											"begin": 2,
+											"end": 4,
+											"name": "PUSH [tag]",
+											"value": "5"
+										},
+										{
+											"begin": 2,
+											"end": 4,
+											"name": "JUMPI"
+										},
+										{
+											"begin": 29,
+											"end": 30,
+											"name": "PUSH",
+											"value": "0"
+										},
+										{
+											"begin": 26,
+											"end": 27,
+											"name": "DUP1"
+										},
+										{
+											"begin": 19,
+											"end": 31,
+											"name": "REVERT"
+										},
+										{
+											"begin": 2,
+											"end": 4,
+											"name": "tag",
+											"value": "5"
+										},
+										{
+											"begin": 2,
+											"end": 4,
+											"name": "JUMPDEST"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "DUP2"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "ADD"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "SWAP1"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "DUP1"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "DUP1"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "CALLDATALOAD"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "SWAP1"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "PUSH",
+											"value": "20"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "ADD"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "SWAP1"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "SWAP3"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "SWAP2"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "SWAP1"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "POP"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "POP"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "POP"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "PUSH [tag]",
+											"value": "6"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "JUMP"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "tag",
+											"value": "4"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "JUMPDEST"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "STOP"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "tag",
+											"value": "6"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "JUMPDEST"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "POP"
+										},
+										{
+											"begin": 3178,
+											"end": 3224,
+											"name": "JUMP",
+											"value": "[out]"
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {
+							"makeTrade(uint256)": "cf285031"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"currentPrice\",\"type\":\"uint256\"}],\"name\":\"makeTrade\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"Week20-Day2-Activity5.sol\":\"TradeController\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"Week20-Day2-Activity5.sol\":{\"keccak256\":\"0x7b1392d749280a7224884eb8bd4ba403dd2c5faf5b67f1ccd7d682dc7a846e0e\",\"urls\":[\"bzzr://a408159e044624cbb37ce9e9c6c8b8d7ece05872d65e761cbeb4189210cadc02\"]}},\"version\":1}",
+					"userdoc": {
+						"methods": {}
+					}
+				}
+			}
+		},
+		"errors": [
+			{
+				"component": "general",
+				"formattedMessage": "Week20-Day2-Activity5.sol:53:24: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.\n    function makeTrade(uint currentPrice) public{}\n                       ^---------------^\n",
+				"message": "Unused function parameter. Remove or comment out the variable name to silence this warning.",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": 3214,
+					"file": "Week20-Day2-Activity5.sol",
+					"start": 3197
+				},
+				"type": "Warning"
+			},
+			{
+				"component": "general",
+				"formattedMessage": "Week20-Day2-Activity5.sol:53:5: Warning: Function state mutability can be restricted to pure\n    function makeTrade(uint currentPrice) public{}\n    ^--------------------------------------------^\n",
+				"message": "Function state mutability can be restricted to pure",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": 3224,
+					"file": "Week20-Day2-Activity5.sol",
+					"start": 3178
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"Week20-Day2-Activity5.sol": {
+				"ast": {
+					"absolutePath": "Week20-Day2-Activity5.sol",
+					"exportedSymbols": {
+						"TradeController": [
+							12
+						]
+					},
+					"id": 13,
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.5",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "3076:23:0"
+						},
+						{
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"documentation": null,
+							"fullyImplemented": true,
+							"id": 12,
+							"linearizedBaseContracts": [
+								12
+							],
+							"name": "TradeController",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": false,
+									"id": 3,
+									"name": "previousPrice",
+									"nodeType": "VariableDeclaration",
+									"scope": 12,
+									"src": "3132:18:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "uint",
+										"nodeType": "ElementaryTypeName",
+										"src": "3132:4:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"value": null,
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 5,
+									"name": "tradeType",
+									"nodeType": "VariableDeclaration",
+									"scope": 12,
+									"src": "3156:16:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_string_storage",
+										"typeString": "string"
+									},
+									"typeName": {
+										"id": 4,
+										"name": "string",
+										"nodeType": "ElementaryTypeName",
+										"src": "3156:6:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_string_storage_ptr",
+											"typeString": "string"
+										}
+									},
+									"value": null,
+									"visibility": "internal"
+								},
+								{
+									"body": {
+										"id": 10,
+										"nodeType": "Block",
+										"src": "3222:2:0",
+										"statements": []
+									},
+									"documentation": null,
+									"id": 11,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "makeTrade",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 8,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 7,
+												"name": "currentPrice",
+												"nodeType": "VariableDeclaration",
+												"scope": 11,
+												"src": "3197:17:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 6,
+													"name": "uint",
+													"nodeType": "ElementaryTypeName",
+													"src": "3197:4:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"value": null,
+												"visibility": "internal"
+											}
+										],
+										"src": "3196:19:0"
+									},
+									"returnParameters": {
+										"id": 9,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "3222:0:0"
+									},
+									"scope": 12,
+									"src": "3178:46:0",
+									"stateMutability": "nonpayable",
+									"superFunction": null,
+									"visibility": "public"
+								}
+							],
+							"scope": 13,
+							"src": "3101:125:0"
+						}
+					],
+					"src": "3076:152:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
