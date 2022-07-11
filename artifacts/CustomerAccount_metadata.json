@@ -16,6 +16,10 @@
 					},
 					{
 						"name": "",
+						"type": "address"
+					},
+					{
+						"name": "",
 						"type": "bool"
 					},
 					{
@@ -39,12 +43,12 @@
 				"constant": false,
 				"inputs": [
 					{
-						"name": "recipient",
-						"type": "address"
-					},
-					{
 						"name": "amount",
 						"type": "uint256"
+					},
+					{
+						"name": "recipient",
+						"type": "address"
 					}
 				],
 				"name": "sendRemittance",
@@ -81,6 +85,10 @@
 				"inputs": [
 					{
 						"name": "newOwner",
+						"type": "address"
+					},
+					{
+						"name": "newAuthorizedRecipient",
 						"type": "address"
 					},
 					{
@@ -121,7 +129,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Week20-Day2-Activity2.sol": "CustomerAccount"
+			"Week20-Day3-Activity2.sol": "CustomerAccount"
 		},
 		"evmVersion": "byzantium",
 		"libraries": {},
@@ -132,10 +140,10 @@
 		"remappings": []
 	},
 	"sources": {
-		"Week20-Day2-Activity2.sol": {
-			"keccak256": "0xd91f930c4c1189ebfb37f81381b3d73858f589e56bab77e975b56ec4784e3026",
+		"Week20-Day3-Activity2.sol": {
+			"keccak256": "0xa23176a89013a68777a920b0b1b3425e2199041cec345d0ed77443b5b39295e1",
 			"urls": [
-				"bzzr://e57b2598c55c45fe93a2055ce7fb8091d3f2a0cc803420677e89a04048919f22"
+				"bzzr://90bdd06f92c99ce56dad9642958fef4c273d1784527e306fa735a7d2af505ca7"
 			]
 		}
 	},
