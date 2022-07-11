@@ -47,7 +47,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Week20-Day2-Activity1.sol": "BankAccount"
+			"Week20-Day3-Activity1.sol": "BankAccount"
 		},
 		"evmVersion": "byzantium",
 		"libraries": {},
@@ -58,10 +58,10 @@
 		"remappings": []
 	},
 	"sources": {
-		"Week20-Day2-Activity1.sol": {
-			"keccak256": "0x5f6cc43db8313e0b1c205c05b69fb29f4d3b6eafc15d685c85b36d77c463bc3a",
+		"Week20-Day3-Activity1.sol": {
+			"keccak256": "0xd4684dcda606c9c54d1a86b5b3e1d51c60c4e2732fa32645a9c41e1f8f197a60",
 			"urls": [
-				"bzzr://8bb1d6a3efd96258c7bbeed8c697ab127634ba460f2dcdd5ead2b41b86b39e26"
+				"bzzr://acaf391982148fc97f8b8deab68ee4fffdebdd9bccb1664bb09bae1308595480"
 			]
 		}
 	},
