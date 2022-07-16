@@ -5,6 +5,7 @@ contract ArcadeToken {
     string public symbol = "ARCD";
     uint public exchange_rate = 100;
 
+// Think of mapping as a dictinary of Key-Value Pair in python
     mapping(address => uint) balances;
 
     function balance() public view returns(uint) {
