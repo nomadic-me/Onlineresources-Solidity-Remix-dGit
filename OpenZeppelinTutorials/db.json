@@ -1,6 +1,7 @@
+ {
   "id": 0,
-  "description": "My NFT",
+  "description": "My NFT - TokenizeMe 20220716",
   "external_url": "https://forum.openzeppelin.com/t/create-an-nft-and-deploy-to-a-public-testnet-using-truffle/2961",
   "image": "https://tokenizeme.io/wp-content/uploads/2022/07/cropped-cropped-TokenizeMe_SolidBG-e1657557277899.png",
-  "name": "My NFT 0"
+  "name": "My NFT 20220716"
 }
