@@ -5,11 +5,17 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5
 
 contract ArcadeToken is ERC20, ERC20Detailed {
     address payable owner;
+
+    modifier onlyOwner {
+        require(msg.sender == owner, "You do not have permission to mint these tokens!");
+        _;
+    }
+
     constructor(uint initial_supply) ERC20Detailed("ArcadeToken","ARCD",18) public {
         owner = msg.sender;
         _mint(owner, initial_supply);
     }
-    
+
     function mint(address recipient, uint amount) public {
                 _mint(recipient, amount);
     }
