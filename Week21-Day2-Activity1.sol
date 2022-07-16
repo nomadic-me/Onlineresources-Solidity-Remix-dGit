@@ -9,4 +9,8 @@ contract ArcadeToken is ERC20, ERC20Detailed {
         owner = msg.sender;
         _mint(owner, initial_supply);
     }
+    
+    function mint(address recipient, uint amount) public {
+                _mint(recipient, amount);
+    }
 }

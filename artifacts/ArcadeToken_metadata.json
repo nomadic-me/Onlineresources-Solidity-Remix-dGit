@@ -121,6 +121,24 @@
 				"type": "function"
 			},
 			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"constant": true,
 				"inputs": [
 					{
@@ -333,9 +351,9 @@
 	},
 	"sources": {
 		"Week21-Day2-Activity1.sol": {
-			"keccak256": "0xbbbe0a700c01f1eebc98201a7ea5228a997b06e3650471872db9ee1798045afe",
+			"keccak256": "0x4a9c1004e785de6d5d697254adcfcb0971fd94e27575f9e43a0a1a4ac800eb5e",
 			"urls": [
-				"bzzr://739016958a9ee0c0f07cd9ada73104edaa340ede89efa86dca660992d35da687"
+				"bzzr://843478913d33788b4952b484fc6d79cea43ff52e364b933bf20ccb04b1f166bb"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/GSN/Context.sol": {
