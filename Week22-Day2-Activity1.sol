@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.5;
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC721/ERC721Full.sol";
 
@@ -10,7 +10,8 @@ contract ArtRegistry is ERC721Full {
         string artist;
         uint256 appraisalValue;
     }
-
+    
+// In Python ({"Name":"Steve","Artist":"Steve","Apprisal_value":"$1"}) 
     mapping(uint256 => Artwork) public artCollection;
 
     event Appraisal(uint256 tokenId, uint256 appraisalValue, string reportURI);
