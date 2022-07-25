@@ -298,6 +298,10 @@
 						"type": "string"
 					},
 					{
+						"name": "decimal",
+						"type": "uint8"
+					},
+					{
 						"name": "initial_supply",
 						"type": "uint256"
 					}
@@ -421,7 +425,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Week21-Day3-Activity3.sol": "ArcadeToken"
+			"Week21-Day3-Activity2.sol": "XP_Token"
 		},
 		"evmVersion": "byzantium",
 		"libraries": {},
@@ -432,10 +436,10 @@
 		"remappings": []
 	},
 	"sources": {
-		"Week21-Day3-Activity3.sol": {
-			"keccak256": "0x5bce5db78b0c7f8da247b7cf17af799be16dc75054dd36831b75b8f2107a7df1",
+		"Week21-Day3-Activity2.sol": {
+			"keccak256": "0xbf581539db6724baf16f477a655c65bc206bb341b57b0f839de79db1cac2dd71",
 			"urls": [
-				"bzzr://5d189c4c7a4de2571cb827f30011d5b93ef6b6c78051c0ad78d556f6a2f12174"
+				"bzzr://2c7278eb2a5cd9edf6ad5426fd356c947f53d2329df996452a6e8ea9a079fdb3"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/GSN/Context.sol": {
